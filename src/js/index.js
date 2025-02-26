@@ -1,2 +1,5 @@
-import mobileNav from './modules/mobile-nav.js';
-mobileNav();
+// Libraries
+
+import fslightbox from "fslightbox";
+import "./modules/sliders.js";
+import $ from "jquery";
