@@ -1,5 +1,6 @@
 // Libraries
 
-import fslightbox from "fslightbox";
+// import fslightbox from "fslightbox";
 import "./modules/sliders.js";
-import $ from "jquery";
+import "./modules/pop-ups.js";
+import "./modules/modals.js";

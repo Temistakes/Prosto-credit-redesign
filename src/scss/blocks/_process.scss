@@ -1,0 +1,88 @@
+// Process Styles
+
+.process {
+    width: 100%;
+    margin-bottom: 6.25rem;
+
+    .container {
+        padding: 0 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.1875rem;
+    }
+}
+
+.process-item {
+    width: 100%;
+    border-radius: 1.5rem;
+    background: $white;
+    padding: 1.875rem;
+
+    &__icon {
+        padding: 1.125rem;
+        border-radius: 0.75rem;
+        background: $secondaryColor;
+        margin-bottom: 1.25rem;
+    }
+
+    &__text {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+
+        .orange {
+            display: inline;
+        }
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1450px) {
+    .process-item {
+        padding: 1.25rem;
+
+        &__text {
+            font-size: 1.25rem;
+        }
+
+        &__icon {
+            width: 3rem;
+            padding: 0.625rem;
+            margin-bottom: 1.875rem;
+        }
+    }
+}
+
+@media all and (max-width: 1150px) {
+    .process {
+        .container {
+            gap: 1.25rem;
+        }
+    }
+}
+
+@media all and (max-width: 1050px) {
+    .process {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .process {
+        margin-bottom: 3.75rem;
+        .container {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+    }
+
+    .process-item {
+        br:not(.br-mobile) {
+            display: none;
+        }
+    }
+}

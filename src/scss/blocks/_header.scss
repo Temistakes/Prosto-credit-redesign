@@ -1,0 +1,142 @@
+// Header Styles
+
+.header {
+    width: 100%;
+    padding: 1rem 3rem;
+    border-bottom: 0.125rem solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__menu {
+        font-weight: $semibold;
+        font-size: 1.5rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1.5625rem;
+            height: 1rem;
+            background: url("../img/icons/menu.svg") no-repeat center / 100%;
+        }
+    }
+
+    &__phone {
+        font-size: 1.5rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        font-weight: $semibold;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__soc {
+        border-radius: 29.88rem;
+        width: 2.88rem;
+        height: 2.88rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+
+        svg {
+            position: relative;
+        }
+
+        &:nth-child(1) svg {
+            right: 0.03125rem;
+        }
+
+        &:nth-child(2) svg {
+            right: 0.125rem;
+        }
+
+        &:nth-child(3) svg {
+            bottom: 0.0625rem;
+            left: 0.0625rem;
+        }
+    }
+
+    &__anonymous-chat {
+        padding: 0.875rem 2.375rem;
+        background: $white;
+        font-weight: $semibold;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        color: $black;
+        border-radius: 62.5rem;
+        text-transform: uppercase;
+    }
+
+    &__mobile-menu {
+        display: none;
+        width: 2.0625rem;
+        height: 1.25rem;
+        background: url("../img/icons/menu.svg") no-repeat center / 100%;
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1150px) {
+    .header {
+        &__mobile-menu {
+            display: block;
+            background: url("../img/icons/menu-mobile.svg") no-repeat center /
+                100%;
+        }
+
+        &__anonymous-chat,
+        &__menu,
+        &__phone {
+            display: none;
+        }
+
+        &__soc {
+            width: 2.25rem;
+            height: 2.25rem;
+            svg {
+                transform: scale(0.8);
+            }
+
+            &:nth-child(1) svg {
+                right: 0;
+            }
+
+            &:nth-child(2) svg {
+                right: 0.0625rem;
+            }
+
+            &:nth-child(3) svg {
+                bottom: 0.0625rem;
+                left: 0.0625rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .header {
+        padding: 1rem 1.25rem;
+    }
+
+    .pop-up-wrap {
+        display: none;
+    }
+}

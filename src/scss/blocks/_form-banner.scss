@@ -1,0 +1,154 @@
+// Form-banner Styles
+
+.form-banner-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    background: $mainBg;
+    border-top-left-radius: 1.5rem;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        width: 1.5625rem;
+        height: 1.4375rem;
+        background: url("../img/icons/border-pseudo.svg") no-repeat center /
+            100%;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 100%;
+    }
+}
+
+.form-banner {
+    width: 31.94rem;
+    height: 21.25rem;
+    background:
+        url("../img/backgrounds/gray-bg.png") no-repeat center / cover,
+        radial-gradient(
+            45.39% 45.46% at 52.08% 36.29%,
+            #2d3e6d 0%,
+            #243259 100%
+        );
+    background-blend-mode: multiply;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-weight: $medium;
+        font-size: 2rem;
+        line-height: 90%;
+        letter-spacing: -0.04em;
+        margin-top: 0.875rem;
+    }
+
+    &__text-wrap {
+        max-width: 22.875rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    &__text {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+
+        .orange {
+            display: inline;
+        }
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1500px) {
+    .form-banner {
+        width: 26rem;
+        height: 18rem;
+
+        &__btn {
+            max-width: 100%;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__text {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    .form-banner-wrap {
+        width: 100%;
+        border: none;
+        padding: 0;
+        position: relative;
+        border-radius: 0;
+        margin-top: 2rem;
+        padding-top: 0.625rem;
+
+        &::after {
+            bottom: 100%;
+            right: 0;
+        }
+
+        &::before {
+            bottom: 100%;
+            left: -0.0625rem;
+            transform: rotate(90deg);
+        }
+    }
+
+    .form-banner {
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .form-banner-wrap {
+        margin-top: 0;
+    }
+
+    .form-banner {
+        height: 18.12rem;
+        padding: 2.1875rem 1.25rem;
+
+        &__title {
+            margin-top: 0;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+
+        &__text-wrap {
+            gap: 0.625rem;
+            max-width: 15.25rem;
+        }
+
+        &__btn {
+            padding: 1.25rem;
+        }
+    }
+}

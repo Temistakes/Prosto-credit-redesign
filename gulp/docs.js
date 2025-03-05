@@ -55,26 +55,26 @@ function plumberNotify(title) {
 // Tasks
 
 gulp.task("html:docs", () => gulp
-    .src(["./src/html/**/*.html", "!./src/html/blocks/*.html"])
+    .src(["./src/html/**/*.html", "!./src/html/blocks/*.html", "!./src/html/elements/*.html"])
     .pipe(changed("./docs/"))
     .pipe(plumber(plumberNotify("HTML")))
     .pipe(fileInclude(fileIncludeSetting))
-    .pipe(webpHTML())
     .pipe(htmlclean())
+    .pipe(webpHTML())
     .pipe(gulp.dest("./docs/")));
 
 gulp.task("sass:docs", () => gulp
     .src("./src/scss/*.scss")
     .pipe(changed("./docs/css/"))
     .pipe(plumber(plumberNotify("SCSS")))
-    .pipe(sourceMaps.init())
+    // .pipe(sourceMaps.init())
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(webpCss())
     .pipe(groupMedia())
     .pipe(autoprefixer())
     .pipe(csso())
-    .pipe(sourceMaps.write())
+    // .pipe(sourceMaps.write())
     .pipe(gulp.dest("./docs/css/")));
 
 gulp.task("images:docs", () => gulp

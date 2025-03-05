@@ -1,0 +1,192 @@
+// Footer Styles
+
+.footer {
+    width: 100%;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    color: $white;
+
+    .container {
+        background:
+            url("../img/backgrounds/gray-bg.png") no-repeat center / cover,
+            radial-gradient(
+                45.39% 45.46% at 52.08% 36.29%,
+                #2d3e6d 0%,
+                #243259 100%
+            );
+        background-blend-mode: multiply;
+        padding: 3.125rem 3rem 3.75rem 3rem;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 10rem;
+    }
+
+    &__phone {
+        font-weight: $semibold;
+        font-size: 4rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__buttons-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__soc {
+        border-radius: 29.88rem;
+        width: 2.88rem;
+        height: 2.88rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+
+        svg {
+            position: relative;
+        }
+
+        &:nth-child(1) svg {
+            right: 0.03125rem;
+        }
+
+        &:nth-child(2) svg {
+            right: 0.125rem;
+        }
+
+        &:nth-child(3) svg {
+            bottom: 0.0625rem;
+            left: 0.0625rem;
+        }
+    }
+
+    &__anonymous-chat {
+        padding: 0.875rem 2.375rem;
+        background: $white;
+        font-weight: $semibold;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        color: $black;
+        border-radius: 62.5rem;
+        text-transform: uppercase;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: $medium;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1550px) {
+    .footer {
+        &__phone {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .footer {
+        &__phone {
+            position: static;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .footer {
+        .container {
+            padding: 2.5rem 1.25rem;
+        }
+        &__top {
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        &__logo {
+            margin-bottom: 2.5rem;
+        }
+
+        &__phone {
+            margin-top: 3.75rem;
+            order: 2;
+        }
+
+        &__buttons {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        &__bottom {
+            flex-direction: column;
+        }
+
+        &__adress {
+            margin-bottom: 5.8125rem;
+        }
+
+        &__inn {
+            margin-bottom: 1.5rem;
+        }
+
+        &__inn,
+        &__policy {
+            color: $blue1;
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .footer {
+        text-align: center;
+        padding: 0 0.3125rem 0.3125rem;
+        &__logo {
+            width: 10.625rem;
+            height: 2.25rem;
+        }
+        &__phone {
+            font-size: 2.375rem;
+        }
+
+        &__inn,
+        &__policy {
+            font-size: 0.75rem;
+        }
+
+        &__policy {
+            margin-bottom: 1.5rem;
+        }
+
+        &__inn {
+            order: 2;
+            margin-bottom: 0;
+        }
+
+        &__anonymous-chat {
+            padding: 0.875rem 3rem;
+        }
+    }
+}

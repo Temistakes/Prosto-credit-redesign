@@ -1,0 +1,86 @@
+// Mobile Menu Styles
+
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    background: $modalBg;
+    z-index: 1000;
+    display: none;
+    &__wrap {
+        width: 50%;
+        height: 100%;
+        background: $white;
+        padding: 2rem 2.5rem 9rem 1.3125rem;
+        position: relative;
+    }
+
+    &__skip-btn-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    &__link {
+        font-weight: $semibold;
+        font-size: 1.5rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: 5rem;
+        left: 1.3125rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8125rem;
+    }
+
+    &__soc {
+        background: $black;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        svg {
+            position: relative;
+        }
+
+        &:nth-child(1) svg {
+            right: 0.03125rem;
+        }
+
+        &:nth-child(2) svg {
+            right: 0.125rem;
+        }
+
+        &:nth-child(3) svg {
+            bottom: 0.0625rem;
+            left: 0.0625rem;
+        }
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 800px) {
+    .mobile-menu {
+        &__wrap {
+            width: 100%;
+        }
+    }
+}

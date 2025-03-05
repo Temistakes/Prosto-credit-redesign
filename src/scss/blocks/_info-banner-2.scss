@@ -1,0 +1,235 @@
+// Info-Banner-2 Styles
+
+.info-banner-2 {
+    width: 100%;
+    margin-bottom: 5rem;
+    color: $white;
+
+    .container {
+        background:
+            url("../img/backgrounds/gray-bg.png") no-repeat center / cover,
+            radial-gradient(
+                45.39% 45.46% at 52.08% 36.29%,
+                #2d3e6d 0%,
+                #243259 100%
+            );
+        background-blend-mode: multiply;
+        padding: 6.25rem 3rem;
+        overflow: hidden;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3.125rem;
+        gap: 1rem;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 3.81rem;
+            height: 3.81rem;
+            background: url("../img/icons/vk.svg") no-repeat center / 100%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    &__left {
+        position: relative;
+        &::before {
+            content: "";
+            width: 46.875rem;
+            height: 45.3125rem;
+            background: url("../img/info-banner-2/phone-pseudo.png") no-repeat
+                center / 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__img-mobile {
+        display: none;
+    }
+
+    &__right {
+        position: relative;
+        z-index: 1;
+        max-width: 33.94rem;
+    }
+
+    &__text-wrap {
+        padding-left: 3.625rem;
+        position: relative;
+        margin-bottom: 3rem;
+
+        &::before {
+            content: "!";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            font-size: 9rem;
+            line-height: 105%;
+            letter-spacing: -0.04em;
+            color: $secondaryColor;
+        }
+    }
+
+    &__title-mini {
+        font-weight: $semibold;
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+        margin-bottom: 1.25rem;
+    }
+
+    &__subtitle {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        letter-spacing: -0.04em;
+    }
+
+    &__video-link {
+        margin-bottom: 1.875rem;
+    }
+
+    &__btn {
+        max-width: 30.56rem;
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1050px) {
+    .info-banner-2 {
+        &__img {
+            display: none;
+        }
+
+        // &__left {
+        //     &::before {
+        //         display: none;
+        //     }
+        // }
+
+        &__row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__left {
+            display: none;
+        }
+
+        &__img-mobile {
+            display: inline-block;
+            z-index: 1;
+            position: relative;
+            max-width: 20rem;
+        }
+
+        &__img-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.6875rem;
+            &::before {
+                content: "";
+                width: 22.375rem;
+                height: 21.625rem;
+                background: url("../img/info-banner-2/phone-pseudo.png")
+                    no-repeat center / 100%;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%, 110%);
+            }
+        }
+
+        &__btn {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__video-link {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__video-preview {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__title {
+            display: block;
+
+            &::after {
+                transform: translate(0, 25%);
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .info-banner-2 {
+        margin-bottom: 3.75rem;
+        .container {
+            padding: 2.5rem 1.25rem;
+        }
+
+        &__title {
+            margin-bottom: 2.8125rem;
+            &::after {
+                width: 2rem;
+                height: 2rem;
+                transform: translate(0, 20%);
+            }
+        }
+
+        &__text-wrap {
+            padding-left: 2.75rem;
+            margin-left: 0.75rem;
+            &::before {
+                font-size: 6.4375rem;
+            }
+        }
+
+        &__title-mini {
+            font-size: 1.125rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__img-wrap {
+            &::before {
+                top: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+}

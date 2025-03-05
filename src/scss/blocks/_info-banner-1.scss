@@ -1,0 +1,54 @@
+// Info-Banner-1 Styles
+
+.info-banner-1 {
+    width: 100%;
+    text-align: center;
+    color: $white;
+    margin-bottom: 5rem;
+
+    .container {
+        background:
+            url("../img/backgrounds/gray-bg.png") no-repeat center / cover,
+            radial-gradient(
+                45.39% 45.46% at 52.08% 36.29%,
+                #2d3e6d 0%,
+                #243259 100%
+            );
+        background-blend-mode: multiply;
+        padding: 6.25rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: $normal;
+        font-size: 2rem;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        max-width: 54.625rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 600px) {
+    .info-banner-1 {
+        margin-bottom: 3.75rem;
+        .container {
+            padding: 1.875rem 1.5rem 2.1875rem;
+        }
+
+        &__text {
+            font-size: 1.25rem;
+            margin-bottom: 1.875rem;
+        }
+
+        &__btn {
+            max-width: 100%;
+            width: 100%;
+            padding: 1.25rem;
+        }
+    }
+}

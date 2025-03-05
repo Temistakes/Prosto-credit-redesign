@@ -1,22 +1,195 @@
 // Utils Classes
 
 .none {
-	display: none !important;
+    display: none !important;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .no-scroll {
-	overflow-y: hidden;
+    overflow-y: hidden;
+}
+
+// Text Styles
+
+.orange {
+    color: $secondaryColor;
+}
+
+// Logo Styles
+
+.logo {
+    width: 11.5625rem;
+    height: 2.8125rem;
+    background: url("../img/icons/logo.svg") no-repeat center / 100%;
+}
+
+@media all and (max-width: 600px) {
+    .logo {
+        width: 9.25rem;
+        height: 2rem;
+    }
+}
+
+// Buttons Styles
+
+.btn {
+    border-radius: 1.25rem;
+    max-width: 33.5rem;
+    width: 100%;
+    padding: 1.375rem;
+    text-align: center;
+    background: $white;
+    font-weight: $semibold;
+    font-size: 1.25rem;
+    line-height: 105%;
+    letter-spacing: -0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+
+    &_outline {
+        background: none;
+        outline: 0.125rem solid $white;
+        color: $white;
+    }
+
+    &_blue {
+        background: $black;
+        color: $white;
+    }
+}
+
+@media all and (max-width: 1500px) {
+    .btn {
+        font-size: 1rem;
+        max-width: 25rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+    }
+}
+
+// Titles Styles
+
+.title {
+    font-weight: $medium;
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+}
+
+@media all and (max-width: 600px) {
+    .title {
+        font-size: 2.25rem;
+    }
+}
+
+// Br Styles
+
+.br-mobile {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+    .br-mobile {
+        display: inline-block;
+    }
+}
+
+// Pop Ups Styles
+
+.pop-up-wrap {
+    position: relative;
+}
+
+.pop-up {
+    max-width: 24.5rem;
+    width: 24.5rem;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    background: $white;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    color: $black;
+    display: none;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__link {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 105%;
+        letter-spacing: -0.04em;
+    }
+}
+
+// Inputs Styles
+
+.input {
+    width: 100%;
+    border: 3px solid $black;
+    border-radius: 1.25rem;
+    padding: 1rem 1.625rem;
+    font-weight: $medium;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+
+    &::placeholder {
+        color: $gray1;
+    }
+}
+
+// Checkboxes Styles
+
+.checkbox {
+    &__label {
+        font-weight: $medium;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        display: flex;
+        gap: 0.5rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            min-width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #253256;
+            border-radius: 0.38rem;
+            display: inline-block;
+        }
+
+        &::after {
+            content: "";
+            width: 1.125rem;
+            height: 1.125rem;
+            background: url("../img/icons/done.svg") no-repeat center / 100%;
+            position: absolute;
+            left: 0.0625rem;
+            top: 0.0625rem;
+            opacity: 0;
+            transition: 0.3s;
+        }
+    }
+
+    &__input:checked + &__label::after {
+        opacity: 1;
+    }
 }

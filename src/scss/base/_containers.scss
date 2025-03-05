@@ -2,7 +2,8 @@
 
 .container {
     width: 100%;
-    max-width: calc($containerWidth + $containerPadding * 2);
+    max-width: calc($containerWidth1 + $containerPadding * 2);
     padding: 0 $containerPadding;
     margin: 0 auto;
+    border-radius: 1.5rem;
 }

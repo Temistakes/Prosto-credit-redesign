@@ -1,0 +1,87 @@
+// Check List Styles
+
+.check-list {
+    width: 100%;
+    margin-bottom: 5rem;
+
+    .container {
+        background: $white;
+        padding: 6.25rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9.25rem;
+        align-items: center;
+    }
+
+    &__title {
+        max-width: 45.5rem;
+    }
+
+    &__right {
+        max-width: 35.75rem;
+    }
+
+    &__text {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        margin-bottom: 1.25rem;
+    }
+
+    &__download {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        text-decoration: underline !important;
+        color: $secondaryColor;
+
+        &::before {
+            content: "";
+            border-radius: 0.62rem;
+            width: 2.81rem;
+            height: 2.81rem;
+            background: $mainBg url("../img/icons/check-list.svg") no-repeat
+                center / 1.94rem;
+        }
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 1100px) {
+    .check-list {
+        .container {
+            padding: 2.5rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3.75rem;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__text {
+            font-size: 1.25rem;
+            margin-bottom: 1.875rem;
+        }
+
+        &__download {
+            font-size: 1.25rem;
+            gap: 0.75rem;
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .check-list {
+        margin-bottom: 3.75rem;
+    }
+}

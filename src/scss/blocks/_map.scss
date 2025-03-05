@@ -1,0 +1,29 @@
+// Map Styles
+
+.map {
+    padding-bottom: 5rem;
+
+    iframe {
+        border-radius: 1.5rem;
+    }
+
+    .container {
+        padding: 3.75rem 3rem;
+        background: $white;
+    }
+}
+
+// Media Queries
+
+@media all and (max-width: 600px) {
+    .map {
+        padding-bottom: 2.5rem;
+        .container {
+            padding: 2.5rem 1.25rem;
+        }
+
+        iframe {
+            height: 28rem;
+        }
+    }
+}

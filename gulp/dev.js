@@ -13,7 +13,7 @@ const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
 
-gulp.task("clean:dev", done => {
+gulp.task("clean:dev", (done) => {
     if (fs.existsSync("./build/")) {
         return gulp
             .src("./build/", { read: false })

@@ -1,0 +1,98 @@
+// Modals Styles
+
+.iziModal-overlay {
+    backdrop-filter: blur(4px);
+    background: $modalBg !important;
+}
+
+.modal {
+    border-bottom: 0 !important;
+    border-radius: 1.5rem !important;
+    .iziModal-header {
+        background: $white !important;
+        box-shadow: none;
+        padding: 2.5rem 1.875rem 0 1.875rem !important;
+        margin-bottom: 1.25rem;
+    }
+
+    .iziModal-header-title {
+        color: $black;
+    }
+
+    .iziModal-button-close {
+        display: none;
+    }
+
+    .iziModal-header-title {
+        margin-top: 0 !important;
+        font-weight: $medium !important;
+        font-size: 2rem !important;
+        line-height: 100% !important;
+        letter-spacing: -0.04em !important;
+        max-width: 27.75rem;
+        white-space: normal;
+    }
+
+    .iziModal-content {
+        padding: 0 1.875rem 3.5rem !important;
+    }
+
+    &__inputs-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 0.625rem;
+    }
+
+    &__checkbox {
+        margin-bottom: 2rem;
+    }
+
+    &__socials-title {
+        font-weight: $medium;
+        font-size: 1.5rem;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        margin-bottom: 1rem;
+    }
+
+    &__socials-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__soc {
+        background: $black;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        svg {
+            position: relative;
+        }
+
+        &:nth-child(1) svg {
+            right: 0.03125rem;
+        }
+
+        &:nth-child(2) svg {
+            right: 0.125rem;
+        }
+
+        &:nth-child(3) svg {
+            bottom: 0.0625rem;
+            left: 0.0625rem;
+        }
+    }
+
+    &__btn {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.25rem;
+    }
+}
